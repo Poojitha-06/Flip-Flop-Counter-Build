@@ -1,6 +1,6 @@
-# Encoder & Decoder Design
+# Flip-Flop & Counter Build
 
-This project implements Encoder and Decoder circuits using Verilog HDL.
+This project implements a D Flip-Flop and a 4-bit Counter using Verilog HDL.
 
 ## Internship Details
 - Internship ID: CITS714
@@ -10,9 +10,10 @@ This project implements Encoder and Decoder circuits using Verilog HDL.
 - EDA Playground
 
 ## Features
-- 4-to-2 Encoder Design
-- 2-to-4 Decoder Design
-- Functional verification using waveform simulation
+- D Flip-Flop implementation
+- 4-bit Counter design
+- Clock-based sequential circuit simulation
+- Waveform verification
 
 ## Output
 Waveform output successfully verified.
