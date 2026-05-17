@@ -1,37 +1,29 @@
 module tb;
 
-reg [3:0] d;
-wire [1:0] y1;
+reg d,clk;
+wire q;
 
-reg [1:0] a;
-wire [3:0] y2;
+wire [3:0] count;
 
-encoder enc(d,y1);
-decoder dec(a,y2);
+dff d1(d,clk,q);
+counter c1(clk,count);
 
 initial begin
 
 $dumpfile("dump.vcd");
 $dumpvars(0,tb);
 
-d = 4'b0001;
-a = 2'b00;
-#10;
+clk = 0;
+d = 0;
 
-d = 4'b0010;
-a = 2'b01;
-#10;
+#10 d = 1;
+#10 d = 0;
+#10 d = 1;
 
-d = 4'b0100;
-a = 2'b10;
-#10;
-
-d = 4'b1000;
-a = 2'b11;
-#10;
-
-$finish;
+#50 $finish;
 
 end
+
+always #5 clk = ~clk;
 
 endmodule
